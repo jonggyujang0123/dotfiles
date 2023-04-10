@@ -15,28 +15,24 @@ cd dotfiles-MacOS
 bash symlink.sh
 ```
 
-3. Install ZSH
+3. Install ZSH / Theme / Plugin
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-4. Install ZSH THEME
-
-```bash
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-bash dotfiles-light/symlink.sh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 source .zshrc
 ```
-5. Install Conda
+
+4. Install Logo-ls
 
 ```bash
-bash dotfiles-light/CondaConfig/install-conda.sh
+bash install-logo-ls-locally.sh
+source ~/.zshrc
 ```
-6. Install vimplugin
+
+5. Install vimplugin
 
 download node.js from https://nodejs.org/ko/download
 
