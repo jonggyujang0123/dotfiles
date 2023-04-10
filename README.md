@@ -32,7 +32,7 @@ bash install-logo-ls-locally.sh
 source ~/.zshrc
 ```
 
-5. Install vimplugin
+5. (optional) Install vimplugin
 
 download node.js from https://nodejs.org/ko/download
 
