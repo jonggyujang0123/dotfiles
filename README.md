@@ -5,7 +5,7 @@
 1. Install wezterm [link](https://wezfurlong.org/wezterm/)
 
 2. Clone repo
-> :Warning: Your dot files will be overrided. See `symlink.sh` and backup your file please.
+> ⚠️: Your dot files will be overrided. See `symlink.sh` and backup your file please.
 
 ```bash
 git clone https://github.com/jonggyujang0123/dotfiles-MacOS.git
