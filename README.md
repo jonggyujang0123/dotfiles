@@ -2,6 +2,9 @@
 
 # Installing Steps
 
+1. Install wezterm [link](https://wezfurlong.org/wezterm/)
+
+
 Your dot files will be overrided. See `symlink.sh` and backup your file please.
 
 ```bash
