@@ -5,16 +5,17 @@
 1. Install wezterm [link](https://wezfurlong.org/wezterm/)
 
 2. Clone repo
-> ⚠️: Your dot files will be overrided. See `symlink.sh` and backup your file please.
+> ⚠️ Your dot files will be overrided. See `symlink.sh` and backup your file please.
 
 ```bash
+mkdir -p .config
+cd .config
 git clone https://github.com/jonggyujang0123/dotfiles-MacOS.git
 cd dotfiles-MacOS 
 bash symlink.sh
 ```
 
 1. Install ZSH
-For MacOS
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
