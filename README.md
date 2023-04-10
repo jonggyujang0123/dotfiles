@@ -1,11 +1,11 @@
-# zsh and tmux setting
+# Dotfiles for MacOS
 
-# Installing Steps
+## Installing Steps
 
 1. Install wezterm [link](https://wezfurlong.org/wezterm/)
 
-
-Your dot files will be overrided. See `symlink.sh` and backup your file please.
+2. Clone repo
+> :Warning: Your dot files will be overrided. See `symlink.sh` and backup your file please.
 
 ```bash
 git clone https://github.com/jonggyujang0123/dotfiles-MacOS.git
