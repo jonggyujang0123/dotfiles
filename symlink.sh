@@ -1,15 +1,27 @@
 #!/usr/bin/env bash
 
-# ln_sb nvim ~/.config
-ln -sf ~/dotfiles-MacOS/vim/.vimrc ~
-# ln_sb nvim-coc ~/.config
-# ln_sb nvim-lazyvim ~/.config
-ln -sf ~/dotfiles-MacOS/oh-my-zsh/.zshrc ~
-ln -sf ~/dotfiles-MacOS/oh-my-zsh/.p10k.zsh ~
-# Installing at ~/.oh-my-zsh will make it difficult to manage oh-my-zsh installation.
-#ln_sb oh-my-zsh ~/.config
-#ln_sb oh-my-zsh/starship.toml ~/.config
-ln -sf ~/dotfiles-MacOS/wezterm/.wezterm.lua ~/.wezterm.lua
-#ln_sb cargo/config.toml ~/.cargo
-ln -sf ~/dotfiles-MacOS/CondaConfig/.condarc ~
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+mkdir -p ~/.backup_dot
+
+ln_sb() {
+    file_path="$1"
+    dest_dir="$2"
+    basename="$(basename "$file_path")"
+    dest_file="$dest_dir/$basename"
+    mkdir -p "$dest_dir"
+    if [[ -f "$dest_file" ]]; then
+        mv "$dest_file" ~/.backup_dot/
+    fi
+    
+    ln -sf "$CURRENT_DIR/$file_path" "$dest_file"
+}
+    
+
+ln_sb vimconfig/.vimrc ~
+ln_sb vimconfig/coc-settings.json ~/.vim
+ln_sb tmux/.tmux.conf ~
+ln_sb oh-my-zsh/.zshrc ~
+ln_sb oh-my-zsh/.p10k.zsh ~
+ln_sb CondaConfig/.condarc ~
+ln_sb wezterm/.wezterm.lua ~/.wezterm.lua
