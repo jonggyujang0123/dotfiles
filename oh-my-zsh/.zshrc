@@ -71,7 +71,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM='$HOME/.config/oh-my-zsh/custom'
+ZSH_CUSTOM="$HOME/.config/oh-my-zsh/custom"
 
 ZVM_INIT_MODE=sourcing
 
@@ -82,15 +82,13 @@ ZVM_INIT_MODE=sourcing
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	zsh-autosuggestions
 )
 
-export EDITOR='nvim'
 
-source $ZSH/oh-my-zsh.sh
 
-# User configuration
-#source ./fzf-tab/fzf-tab.plugin.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "$ZSH/oh-my-zsh.sh"
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -116,6 +114,26 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias tmuxkill='f(){ tmux kill-session -t "$1"; unset -f f; }; f'
+alias tmuxkill='f(){ tmux kill-session -t "$1"; unset -f f; }; f'
+alias tmuxnew='f(){ tmux new -s "$1"; unset -f f; }; f'
+alias tmuxattach='f(){ tmux attach -t "$1"; unset -f f; }; f'
+alias cda='conda deactivate'
+alias ca='f(){ conda activate $1; unset -f f; }; f'
+alias jc='f(){ docker exec -it "$1" /bin/bash; unset -f f; }; f'
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+if [ -f "$HOME/bin/logo-ls" ]; then
+    alias ls="logo-ls"
+fi
+
+if [ -f "$HOME/bin/vim" ]; then
+    alias vim="$HOME/bin/vim"
+    alias vi="$HOME/bin/vim"
+fi
+
 

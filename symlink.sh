@@ -24,4 +24,4 @@ ln_sb tmux/.tmux.conf ~
 ln_sb oh-my-zsh/.zshrc ~
 ln_sb oh-my-zsh/.p10k.zsh ~
 ln_sb CondaConfig/.condarc ~
-ln_sb wezterm/.wezterm.lua ~/.wezterm.lua
+ln_sb wezterm/.wezterm.lua ~ 
