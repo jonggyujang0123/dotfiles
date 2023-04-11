@@ -29,7 +29,7 @@ config.background = {
     -- The texture tiles vertically but not horizontally.
    {
     source = {
-      File = wezterm.home_dir .. '/dotfiles-MacOS/wezterm/cat1.jpg' 
+      File = wezterm.home_dir .. '/.config/dotfiles-MacOS/wezterm/cat1.jpg' 
     },
     -- When we repeat it, mirror it so that it appears "more seamless".
     -- An alternative to this is to set `width = "100%"` and have
